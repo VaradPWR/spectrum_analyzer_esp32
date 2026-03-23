@@ -1,0 +1,276 @@
+Command: /home/varad/.espressif/python_env/idf6.1_py3.12_env/bin/python /home/varad/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/varad/testing/build/testing.elf /home/varad/testing/build/bootloader/bootloader.elf -m '/home/varad/.espressif/python_env/idf6.1_py3.12_env/bin/python' '/home/varad/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v6.1-dev-2002-gfa47e101d5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Mar 17 2026 17:04:15[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (15) boot: chip revision: v3.1[0m
+[0;32mI (18) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (22) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (25) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (29) boot: Enabling RNG early entropy source...[0m
+[0;32mI (33) boot: Partition Table:[0m
+[0;32mI (36) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (42) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (49) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (55) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (62) boot: End of partition table[0m
+[0;32mI (65) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e3b0h (123824) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=0002e3d8 vaddr=3ffb0000 size=01c40h (  7232) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=8f3dch (586716) map[0m
+[0;32mI (330) esp_image: segment 3: paddr=000bf404 vaddr=3ffb1c40 size=02958h ( 10584) load[0m
+[0;32mI (334) esp_image: segment 4: paddr=000c1d64 vaddr=40080000 size=15d6ch ( 89452) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000d7ad8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (382) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (382) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (401) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (401) cpu_start: Pro cpu start user code[0m
+[0;32mI (401) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (403) app_init: Application information:[0m
+[0;32mI (407) app_init: Project name:     testing[0m
+[0;32mI (411) app_init: App version:      1[0m
+[0;32mI (414) app_init: Compile time:     Mar 17 2026 17:05:09[0m
+[0;32mI (419) app_init: ELF file SHA256:  ddc1d5807...[0m
+[0;32mI (423) app_init: ESP-IDF:          v6.1-dev-2002-gfa47e101d5[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFBA2F0 len 00025D10 (151 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 40095D6C len 0000A294 (40 KiB): IRAM[0m
+[0;33mW (475) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (487) spi_flash: detected chip: generic[0m
+[0;32mI (490) spi_flash: flash io: dio[0m
+[0;33mW (493) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (507) main_task: Started on CPU0[0m
+[0;32mI (517) main_task: Calling app_main()[0m
+[0;32mI (517) WEB_SLAVE: === Spectrum Web Slave ===[0m
+[0;32mI (517) WEB_SLAVE: Packet size: 1060 bytes[0m
+[0;32mI (537) WEB_SLAVE: SPI slave task started on core 0[0m
+[0;32mI (537) WEB_SLAVE: Pins — MOSI:23 MISO:19 CLK:18 CS:15[0m
+[0;32mI (537) WEB_SLAVE: Calling spi_slave_initialize (SPI3_HOST)...[0m
+[0;32mI (537) WEB_SLAVE: spi_slave_initialize returned: ESP_OK (0x0)[0m
+[0;32mI (547) WEB_SLAVE: SPI slave ready — waiting for packets (1060 bytes each)[0m
+[0;32mI (767) wifi:wifi driver task: 3ffc3ee0, prio:23, stack:6656, core=0[0m
+[0;32mI (777) wifi:wifi firmware version: 1a4c082[0m
+[0;32mI (777) wifi:wifi certification version: v7.0[0m
+[0;32mI (777) wifi:config NVS flash: enabled[0m
+[0;32mI (777) wifi:config nano formatting: disabled[0m
+[0;32mI (777) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (787) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (787) wifi:Init management short buffer num: 32[0m
+[0;32mI (797) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (797) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (797) wifi:Init static rx buffer num: 10[0m
+[0;32mI (807) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (807) wifi_init: rx ba win: 6[0m
+[0;32mI (817) wifi_init: accept mbox: 6[0m
+[0;32mI (817) wifi_init: tcpip mbox: 32[0m
+[0;32mI (817) wifi_init: udp mbox: 6[0m
+[0;32mI (817) wifi_init: tcp mbox: 6[0m
+[0;32mI (827) wifi_init: tcp tx win: 5760[0m
+[0;32mI (827) wifi_init: tcp rx win: 5760[0m
+[0;32mI (827) wifi_init: tcp mss: 1440[0m
+[0;32mI (837) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (837) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (847) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (927) wifi:mode : softAP (30:76:f5:f3:9b:f5)[0m
+[0;32mI (937) wifi:Total power save buffer number: 16[0m
+[0;32mI (937) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (937) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (937) WEB_SLAVE: WiFi AP: "ESP32-Spectrum" | IP: 192.168.4.1[0m
+[0;32mI (937) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (957) WEB_SLAVE: HTTP server ready — http://192.168.4.1[0m
+[0;32mI (957) WEB_SLAVE: Ready — connect to "ESP32-Spectrum" then open http://192.168.4.1[0m
+[0;32mI (957) main_task: Returned from app_main()[0m
+[0;32mI (5647) WEB_SLAVE: Raw receive: 0 bytes[0m
+[0;33mW (5647) WEB_SLAVE: Size mismatch: got 0 expected 1060[0m
+[0;32mI (6157) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6157) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6157) WEB_SLAVE: Pkt #4 OK | 78 Hz @ -47.6 dB | total: 1[0m
+[0;32mI (6207) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6207) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6207) WEB_SLAVE: Pkt #8 OK | 78 Hz @ -38.4 dB | total: 2[0m
+[0;32mI (6257) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6257) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6257) WEB_SLAVE: Pkt #12 OK | 78 Hz @ -67.9 dB | total: 3[0m
+[0;32mI (6317) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6317) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6317) WEB_SLAVE: Pkt #16 OK | 78 Hz @ -37.8 dB | total: 4[0m
+[0;32mI (6367) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6367) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6367) WEB_SLAVE: Pkt #20 OK | 78 Hz @ -49.6 dB | total: 5[0m
+[0;32mI (6417) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6417) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6417) WEB_SLAVE: Pkt #24 OK | 78 Hz @ -38.4 dB | total: 6[0m
+[0;32mI (6467) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6467) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6467) WEB_SLAVE: Pkt #28 OK | 78 Hz @ -42.0 dB | total: 7[0m
+[0;32mI (6517) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6517) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6517) WEB_SLAVE: Pkt #32 OK | 78 Hz @ -45.9 dB | total: 8[0m
+[0;32mI (6567) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6567) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6567) WEB_SLAVE: Pkt #36 OK | 78 Hz @ -39.7 dB | total: 9[0m
+[0;32mI (6617) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6617) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6617) WEB_SLAVE: Pkt #40 OK | 78 Hz @ -59.0 dB | total: 10[0m
+[0;32mI (6667) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6667) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6667) WEB_SLAVE: Pkt #44 OK | 78 Hz @ -38.3 dB | total: 11[0m
+[0;32mI (6717) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6717) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6717) WEB_SLAVE: Pkt #48 OK | 78 Hz @ -57.0 dB | total: 12[0m
+[0;32mI (6777) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6777) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6777) WEB_SLAVE: Pkt #52 OK | 78 Hz @ -38.5 dB | total: 13[0m
+[0;32mI (6827) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6827) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6827) WEB_SLAVE: Pkt #56 OK | 78 Hz @ -43.2 dB | total: 14[0m
+[0;32mI (6877) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6877) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6877) WEB_SLAVE: Pkt #60 OK | 78 Hz @ -40.4 dB | total: 15[0m
+[0;32mI (6927) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6927) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6927) WEB_SLAVE: Pkt #64 OK | 78 Hz @ -39.2 dB | total: 16[0m
+[0;32mI (6977) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (6977) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (6977) WEB_SLAVE: Pkt #68 OK | 78 Hz @ -51.5 dB | total: 17[0m
+[0;32mI (7027) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7027) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7027) WEB_SLAVE: Pkt #72 OK | 78 Hz @ -38.5 dB | total: 18[0m
+[0;32mI (7077) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7077) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7077) WEB_SLAVE: Pkt #76 OK | 78 Hz @ -65.6 dB | total: 19[0m
+[0;32mI (7127) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7127) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7127) WEB_SLAVE: Pkt #80 OK | 78 Hz @ -38.0 dB | total: 20[0m
+[0;32mI (7187) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7187) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7187) WEB_SLAVE: Pkt #84 OK | 78 Hz @ -46.8 dB | total: 21[0m
+[0;32mI (7237) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7237) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7237) WEB_SLAVE: Pkt #88 OK | 78 Hz @ -38.0 dB | total: 22[0m
+[0;32mI (7287) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7287) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7287) WEB_SLAVE: Pkt #92 OK | 78 Hz @ -39.0 dB | total: 23[0m
+[0;32mI (7337) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7337) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7337) WEB_SLAVE: Pkt #96 OK | 78 Hz @ -44.2 dB | total: 24[0m
+[0;32mI (7387) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7387) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7387) WEB_SLAVE: Pkt #100 OK | 78 Hz @ -37.6 dB | total: 25[0m
+[0;32mI (7437) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7437) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7437) WEB_SLAVE: Pkt #104 OK | 78 Hz @ -63.8 dB | total: 26[0m
+[0;32mI (7487) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7487) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7487) WEB_SLAVE: Pkt #108 OK | 78 Hz @ -37.0 dB | total: 27[0m
+[0;32mI (7537) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7537) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7537) WEB_SLAVE: Pkt #112 OK | 78 Hz @ -51.7 dB | total: 28[0m
+[0;32mI (7597) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7597) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7597) WEB_SLAVE: Pkt #116 OK | 78 Hz @ -37.3 dB | total: 29[0m
+[0;32mI (7647) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7647) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7647) WEB_SLAVE: Pkt #120 OK | 78 Hz @ -41.2 dB | total: 30[0m
+[0;32mI (7697) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7697) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7697) WEB_SLAVE: Pkt #124 OK | 78 Hz @ -40.6 dB | total: 31[0m
+[0;32mI (7747) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7747) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7747) WEB_SLAVE: Pkt #128 OK | 78 Hz @ -38.1 dB | total: 32[0m
+[0;32mI (7797) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7797) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7797) WEB_SLAVE: Pkt #132 OK | 78 Hz @ -52.7 dB | total: 33[0m
+[0;32mI (7847) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7847) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7847) WEB_SLAVE: Pkt #136 OK | 78 Hz @ -37.5 dB | total: 34[0m
+[0;32mI (7897) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7897) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7897) WEB_SLAVE: Pkt #140 OK | 78 Hz @ -60.3 dB | total: 35[0m
+[0;32mI (7947) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7947) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7947) WEB_SLAVE: Pkt #144 OK | 78 Hz @ -37.7 dB | total: 36[0m
+[0;32mI (7997) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (7997) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (7997) WEB_SLAVE: Pkt #148 OK | 78 Hz @ -45.3 dB | total: 37[0m
+[0;32mI (8057) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8057) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8057) WEB_SLAVE: Pkt #152 OK | 78 Hz @ -39.4 dB | total: 38[0m
+[0;32mI (8107) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8107) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8107) WEB_SLAVE: Pkt #156 OK | 78 Hz @ -39.5 dB | total: 39[0m
+[0;32mI (8157) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8157) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8157) WEB_SLAVE: Pkt #160 OK | 78 Hz @ -46.9 dB | total: 40[0m
+[0;32mI (8207) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8207) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8207) WEB_SLAVE: Pkt #164 OK | 78 Hz @ -38.0 dB | total: 41[0m
+[0;32mI (8257) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8257) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8257) WEB_SLAVE: Pkt #168 OK | 78 Hz @ -70.0 dB | total: 42[0m
+[0;32mI (8307) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8307) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8307) WEB_SLAVE: Pkt #172 OK | 78 Hz @ -36.8 dB | total: 43[0m
+[0;32mI (8357) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8357) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8357) WEB_SLAVE: Pkt #176 OK | 78 Hz @ -49.2 dB | total: 44[0m
+[0;32mI (8407) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8407) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8407) WEB_SLAVE: Pkt #180 OK | 78 Hz @ -37.9 dB | total: 45[0m
+[0;32mI (8467) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8467) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8467) WEB_SLAVE: Pkt #184 OK | 78 Hz @ -39.8 dB | total: 46[0m
+[0;32mI (8517) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8517) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8517) WEB_SLAVE: Pkt #188 OK | 78 Hz @ -42.4 dB | total: 47[0m
+[0;32mI (8567) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8567) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8567) WEB_SLAVE: Pkt #192 OK | 78 Hz @ -38.5 dB | total: 48[0m
+[0;32mI (8617) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8617) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8617) WEB_SLAVE: Pkt #196 OK | 78 Hz @ -60.2 dB | total: 49[0m
+[0;32mI (8667) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8667) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8667) WEB_SLAVE: Pkt #200 OK | 78 Hz @ -37.2 dB | total: 50[0m
+[0;32mI (8717) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8717) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8717) WEB_SLAVE: Pkt #204 OK | 78 Hz @ -54.9 dB | total: 51[0m
+[0;32mI (8767) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8767) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8767) WEB_SLAVE: Pkt #208 OK | 78 Hz @ -37.3 dB | total: 52[0m
+[0;32mI (8817) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8817) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8817) WEB_SLAVE: Pkt #212 OK | 78 Hz @ -44.4 dB | total: 53[0m
+[0;32mI (8877) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8877) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8877) WEB_SLAVE: Pkt #216 OK | 78 Hz @ -41.3 dB | total: 54[0m
+[0;32mI (8927) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8927) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8927) WEB_SLAVE: Pkt #220 OK | 78 Hz @ -39.6 dB | total: 55[0m
+[0;32mI (8977) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (8977) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (8977) WEB_SLAVE: Pkt #224 OK | 78 Hz @ -50.8 dB | total: 56[0m
+[0;32mI (9027) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (9027) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (9027) WEB_SLAVE: Pkt #228 OK | 78 Hz @ -38.7 dB | total: 57[0m
+[0;32mI (9077) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (9077) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (9077) WEB_SLAVE: Pkt #232 OK | 78 Hz @ -73.8 dB | total: 58[0m
+[0;32mI (9127) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (9127) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (9127) WEB_SLAVE: Pkt #236 OK | 78 Hz @ -38.3 dB | total: 59[0m
+[0;32mI (9177) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (9177) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (9177) WEB_SLAVE: Pkt #240 OK | 78 Hz @ -48.5 dB | total: 60[0m
+[0;32mI (9227) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (9227) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (9227) WEB_SLAVE: Pkt #244 OK | 78 Hz @ -39.4 dB | total: 61[0m
+[0;32mI (9277) WEB_SLAVE: Raw receive: 1060 bytes[0m
+[0;32mI (9277) WEB_SLAVE: Magic received: 0xe5ff1234 (expected 0xE5FF1234)[0m
+[0;32mI (9277) WEB_SLAVE: Pkt #248 OK | 78 Hz @ -40.8 dB | total: 62[0m
+[0;32mI (9337) WEB_SLAVE: Raw receive: 1060 bytes[0m

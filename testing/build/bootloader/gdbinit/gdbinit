@@ -1,0 +1,2 @@
+source /home/varad/testing/build/bootloader/gdbinit/symbols
+source /home/varad/testing/build/bootloader/gdbinit/connect

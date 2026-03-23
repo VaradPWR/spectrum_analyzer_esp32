@@ -1,0 +1,551 @@
+Command: /home/varad/.espressif/python_env/idf6.1_py3.12_env/bin/python /home/varad/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/varad/spect2/build/spect2.elf /home/varad/spect2/build/bootloader/bootloader.elf -m '/home/varad/.espressif/python_env/idf6.1_py3.12_env/bin/python' '/home/varad/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v6.1-dev-2002-gfa47e101d5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Mar 17 2026 14:10:11[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (15) boot: chip revision: v3.1[0m
+[0;32mI (18) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (22) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (25) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (29) boot: Enabling RNG early entropy source...[0m
+[0;32mI (33) boot: Partition Table:[0m
+[0;32mI (36) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (42) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (49) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (55) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (62) boot: End of partition table[0m
+[0;32mI (65) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0f8a0h ( 63648) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001f8c8 vaddr=3ffb0000 size=00750h (  1872) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=129a8h ( 76200) map[0m
+[0;32mI (126) esp_image: segment 3: paddr=000329d0 vaddr=3ffb0750 size=024e4h (  9444) load[0m
+[0;32mI (130) esp_image: segment 4: paddr=00034ebc vaddr=40080000 size=0dc44h ( 56388) load[0m
+[0;32mI (153) esp_image: segment 5: paddr=00042b08 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Multicore app[0m
+[0;32mI (180) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (180) cpu_start: Pro cpu start user code[0m
+[0;32mI (180) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (182) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     spect2[0m
+[0;32mI (190) app_init: App version:      1[0m
+[0;32mI (193) app_init: Compile time:     Mar 17 2026 14:11:07[0m
+[0;32mI (198) app_init: ELF file SHA256:  b7d6b8d74...[0m
+[0;32mI (202) app_init: ESP-IDF:          v6.1-dev-2002-gfa47e101d5[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB42E8 len 0002BD18 (175 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008DC44 len 000123BC (72 KiB): IRAM[0m
+[0;33mW (253) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (269) spi_flash: flash io: dio[0m
+[0;33mW (272) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (285) main_task: Started on CPU0[0m
+[0;32mI (295) main_task: Calling app_main()[0m
+[0;32mI (295) FFT_MASTER: === FFT Master boot — free heap: 300148[0m
+[0;32mI (295) FFT_MASTER: SR:40000 Hz | FFT:512 pts | 78.0 Hz/bin | every 4 FFTs | CS:GPIO15[0m
+[0;32mI (295) FFT_MASTER: Queue created — item size 1060 bytes x depth 2[0m
+[0;32mI (305) FFT_MASTER: Buffers allocated OK — free heap: 283304[0m
+[0;32mI (315) FFT_MASTER: Initializing SPI bus (SPI3_HOST)...[0m
+[0;32mI (315) FFT_MASTER: SPI master ready — 2 MHz on MOSI:23 CLK:18 CS:15[0m
+[0;32mI (325) FFT_MASTER: ADC ready — 40000 Hz on GPIO34[0m
+[0;32mI (325) FFT_MASTER: FFT ready — 512 pts 78.0 Hz/bin[0m
+[0;32mI (335) FFT_MASTER: All tasks started[0m
+[0;32mI (335) FFT_MASTER: FFT task started[0m
+[0;32mI (335) FFT_MASTER: SPI send task started[0m
+[0;32mI (335) main_task: Returned from app_main()[0m
+[0;32mI (435) FFT_MASTER: ADC sampling started[0m
+[0;32mI (485) FFT_MASTER: Queuing pkt #4 | 0 Hz @ -200.0 dB[0m
+[0;32mI (485) FFT_MASTER: Transmitting pkt #4 over SPI...[0m
+[0;32mI (485) FFT_MASTER: SPI sent #4 OK | total sent: 1[0m
+[0;32mI (535) FFT_MASTER: Queuing pkt #8 | 0 Hz @ -200.0 dB[0m
+[0;32mI (535) FFT_MASTER: Transmitting pkt #8 over SPI...[0m
+[0;32mI (535) FFT_MASTER: SPI sent #8 OK | total sent: 2[0m
+[0;32mI (585) FFT_MASTER: Queuing pkt #12 | 0 Hz @ -200.0 dB[0m
+[0;32mI (585) FFT_MASTER: Transmitting pkt #12 over SPI...[0m
+[0;32mI (585) FFT_MASTER: SPI sent #12 OK | total sent: 3[0m
+[0;32mI (635) FFT_MASTER: Queuing pkt #16 | 0 Hz @ -200.0 dB[0m
+[0;32mI (635) FFT_MASTER: Transmitting pkt #16 over SPI...[0m
+[0;32mI (645) FFT_MASTER: SPI sent #16 OK | total sent: 4[0m
+[0;32mI (685) FFT_MASTER: Queuing pkt #20 | 0 Hz @ -200.0 dB[0m
+[0;32mI (685) FFT_MASTER: Transmitting pkt #20 over SPI...[0m
+[0;32mI (695) FFT_MASTER: SPI sent #20 OK | total sent: 5[0m
+[0;32mI (735) FFT_MASTER: Queuing pkt #24 | 0 Hz @ -200.0 dB[0m
+[0;32mI (735) FFT_MASTER: Transmitting pkt #24 over SPI...[0m
+[0;32mI (745) FFT_MASTER: SPI sent #24 OK | total sent: 6[0m
+[0;32mI (785) FFT_MASTER: Queuing pkt #28 | 0 Hz @ -200.0 dB[0m
+[0;32mI (795) FFT_MASTER: Transmitting pkt #28 over SPI...[0m
+[0;32mI (795) FFT_MASTER: SPI sent #28 OK | total sent: 7[0m
+[0;32mI (845) FFT_MASTER: Queuing pkt #32 | 0 Hz @ -200.0 dB[0m
+[0;32mI (845) FFT_MASTER: Transmitting pkt #32 over SPI...[0m
+[0;32mI (845) FFT_MASTER: SPI sent #32 OK | total sent: 8[0m
+[0;32mI (895) FFT_MASTER: Queuing pkt #36 | 0 Hz @ -200.0 dB[0m
+[0;32mI (895) FFT_MASTER: Transmitting pkt #36 over SPI...[0m
+[0;32mI (895) FFT_MASTER: SPI sent #36 OK | total sent: 9[0m
+[0;32mI (945) FFT_MASTER: Queuing pkt #40 | 0 Hz @ -200.0 dB[0m
+[0;32mI (945) FFT_MASTER: Transmitting pkt #40 over SPI...[0m
+[0;32mI (945) FFT_MASTER: SPI sent #40 OK | total sent: 10[0m
+[0;32mI (995) FFT_MASTER: Queuing pkt #44 | 0 Hz @ -200.0 dB[0m
+[0;32mI (995) FFT_MASTER: Transmitting pkt #44 over SPI...[0m
+[0;32mI (995) FFT_MASTER: SPI sent #44 OK | total sent: 11[0m
+[0;32mI (1045) FFT_MASTER: Queuing pkt #48 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1045) FFT_MASTER: Transmitting pkt #48 over SPI...[0m
+[0;32mI (1055) FFT_MASTER: SPI sent #48 OK | total sent: 12[0m
+[0;32mI (1095) FFT_MASTER: Queuing pkt #52 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1095) FFT_MASTER: Transmitting pkt #52 over SPI...[0m
+[0;32mI (1105) FFT_MASTER: SPI sent #52 OK | total sent: 13[0m
+[0;32mI (1145) FFT_MASTER: Queuing pkt #56 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1145) FFT_MASTER: Transmitting pkt #56 over SPI...[0m
+[0;32mI (1155) FFT_MASTER: SPI sent #56 OK | total sent: 14[0m
+[0;32mI (1195) FFT_MASTER: Queuing pkt #60 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1195) FFT_MASTER: Transmitting pkt #60 over SPI...[0m
+[0;32mI (1205) FFT_MASTER: SPI sent #60 OK | total sent: 15[0m
+[0;32mI (1255) FFT_MASTER: Queuing pkt #64 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1255) FFT_MASTER: Transmitting pkt #64 over SPI...[0m
+[0;32mI (1255) FFT_MASTER: SPI sent #64 OK | total sent: 16[0m
+[0;32mI (1305) FFT_MASTER: Queuing pkt #68 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1305) FFT_MASTER: Transmitting pkt #68 over SPI...[0m
+[0;32mI (1305) FFT_MASTER: SPI sent #68 OK | total sent: 17[0m
+[0;32mI (1355) FFT_MASTER: Queuing pkt #72 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1355) FFT_MASTER: Transmitting pkt #72 over SPI...[0m
+[0;32mI (1355) FFT_MASTER: SPI sent #72 OK | total sent: 18[0m
+[0;32mI (1405) FFT_MASTER: Queuing pkt #76 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1405) FFT_MASTER: Transmitting pkt #76 over SPI...[0m
+[0;32mI (1405) FFT_MASTER: SPI sent #76 OK | total sent: 19[0m
+[0;32mI (1455) FFT_MASTER: Queuing pkt #80 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1455) FFT_MASTER: Transmitting pkt #80 over SPI...[0m
+[0;32mI (1465) FFT_MASTER: SPI sent #80 OK | total sent: 20[0m
+[0;32mI (1505) FFT_MASTER: Queuing pkt #84 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1505) FFT_MASTER: Transmitting pkt #84 over SPI...[0m
+[0;32mI (1515) FFT_MASTER: SPI sent #84 OK | total sent: 21[0m
+[0;32mI (1555) FFT_MASTER: Queuing pkt #88 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1555) FFT_MASTER: Transmitting pkt #88 over SPI...[0m
+[0;32mI (1565) FFT_MASTER: SPI sent #88 OK | total sent: 22[0m
+[0;32mI (1605) FFT_MASTER: Queuing pkt #92 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1605) FFT_MASTER: Transmitting pkt #92 over SPI...[0m
+[0;32mI (1615) FFT_MASTER: SPI sent #92 OK | total sent: 23[0m
+[0;32mI (1665) FFT_MASTER: Queuing pkt #96 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1665) FFT_MASTER: Transmitting pkt #96 over SPI...[0m
+[0;32mI (1665) FFT_MASTER: SPI sent #96 OK | total sent: 24[0m
+[0;32mI (1715) FFT_MASTER: Queuing pkt #100 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1715) FFT_MASTER: Transmitting pkt #100 over SPI...[0m
+[0;32mI (1715) FFT_MASTER: SPI sent #100 OK | total sent: 25[0m
+[0;32mI (1765) FFT_MASTER: Queuing pkt #104 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1765) FFT_MASTER: Transmitting pkt #104 over SPI...[0m
+[0;32mI (1765) FFT_MASTER: SPI sent #104 OK | total sent: 26[0m
+[0;32mI (1815) FFT_MASTER: Queuing pkt #108 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1815) FFT_MASTER: Transmitting pkt #108 over SPI...[0m
+[0;32mI (1815) FFT_MASTER: SPI sent #108 OK | total sent: 27[0m
+[0;32mI (1865) FFT_MASTER: Queuing pkt #112 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1865) FFT_MASTER: Transmitting pkt #112 over SPI...[0m
+[0;32mI (1865) FFT_MASTER: SPI sent #112 OK | total sent: 28[0m
+[0;32mI (1915) FFT_MASTER: Queuing pkt #116 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1915) FFT_MASTER: Transmitting pkt #116 over SPI...[0m
+[0;32mI (1925) FFT_MASTER: SPI sent #116 OK | total sent: 29[0m
+[0;32mI (1965) FFT_MASTER: Queuing pkt #120 | 0 Hz @ -200.0 dB[0m
+[0;32mI (1965) FFT_MASTER: Transmitting pkt #120 over SPI...[0m
+[0;32mI (1975) FFT_MASTER: SPI sent #120 OK | total sent: 30[0m
+[0;32mI (2015) FFT_MASTER: Queuing pkt #124 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2015) FFT_MASTER: Transmitting pkt #124 over SPI...[0m
+[0;32mI (2025) FFT_MASTER: SPI sent #124 OK | total sent: 31[0m
+[0;32mI (2065) FFT_MASTER: Queuing pkt #128 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2075) FFT_MASTER: Transmitting pkt #128 over SPI...[0m
+[0;32mI (2075) FFT_MASTER: SPI sent #128 OK | total sent: 32[0m
+[0;32mI (2125) FFT_MASTER: Queuing pkt #132 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2125) FFT_MASTER: Transmitting pkt #132 over SPI...[0m
+[0;32mI (2125) FFT_MASTER: SPI sent #132 OK | total sent: 33[0m
+[0;32mI (2175) FFT_MASTER: Queuing pkt #136 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2175) FFT_MASTER: Transmitting pkt #136 over SPI...[0m
+[0;32mI (2175) FFT_MASTER: SPI sent #136 OK | total sent: 34[0m
+[0;32mI (2225) FFT_MASTER: Queuing pkt #140 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2225) FFT_MASTER: Transmitting pkt #140 over SPI...[0m
+[0;32mI (2225) FFT_MASTER: SPI sent #140 OK | total sent: 35[0m
+[0;32mI (2275) FFT_MASTER: Queuing pkt #144 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2275) FFT_MASTER: Transmitting pkt #144 over SPI...[0m
+[0;32mI (2275) FFT_MASTER: SPI sent #144 OK | total sent: 36[0m
+[0;32mI (2325) FFT_MASTER: Queuing pkt #148 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2325) FFT_MASTER: Transmitting pkt #148 over SPI...[0m
+[0;32mI (2335) FFT_MASTER: SPI sent #148 OK | total sent: 37[0m
+[0;32mI (2375) FFT_MASTER: Queuing pkt #152 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2375) FFT_MASTER: Transmitting pkt #152 over SPI...[0m
+[0;32mI (2385) FFT_MASTER: SPI sent #152 OK | total sent: 38[0m
+[0;32mI (2425) FFT_MASTER: Queuing pkt #156 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2425) FFT_MASTER: Transmitting pkt #156 over SPI...[0m
+[0;32mI (2435) FFT_MASTER: SPI sent #156 OK | total sent: 39[0m
+[0;32mI (2475) FFT_MASTER: Queuing pkt #160 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2475) FFT_MASTER: Transmitting pkt #160 over SPI...[0m
+[0;32mI (2485) FFT_MASTER: SPI sent #160 OK | total sent: 40[0m
+[0;32mI (2535) FFT_MASTER: Queuing pkt #164 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2535) FFT_MASTER: Transmitting pkt #164 over SPI...[0m
+[0;32mI (2535) FFT_MASTER: SPI sent #164 OK | total sent: 41[0m
+[0;32mI (2585) FFT_MASTER: Queuing pkt #168 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2585) FFT_MASTER: Transmitting pkt #168 over SPI...[0m
+[0;32mI (2585) FFT_MASTER: SPI sent #168 OK | total sent: 42[0m
+[0;32mI (2635) FFT_MASTER: Queuing pkt #172 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2635) FFT_MASTER: Transmitting pkt #172 over SPI...[0m
+[0;32mI (2635) FFT_MASTER: SPI sent #172 OK | total sent: 43[0m
+[0;32mI (2685) FFT_MASTER: Queuing pkt #176 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2685) FFT_MASTER: Transmitting pkt #176 over SPI...[0m
+[0;32mI (2685) FFT_MASTER: SPI sent #176 OK | total sent: 44[0m
+[0;32mI (2735) FFT_MASTER: Queuing pkt #180 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2735) FFT_MASTER: Transmitting pkt #180 over SPI...[0m
+[0;32mI (2745) FFT_MASTER: SPI sent #180 OK | total sent: 45[0m
+[0;32mI (2785) FFT_MASTER: Queuing pkt #184 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2785) FFT_MASTER: Transmitting pkt #184 over SPI...[0m
+[0;32mI (2795) FFT_MASTER: SPI sent #184 OK | total sent: 46[0m
+[0;32mI (2835) FFT_MASTER: Queuing pkt #188 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2835) FFT_MASTER: Transmitting pkt #188 over SPI...[0m
+[0;32mI (2845) FFT_MASTER: SPI sent #188 OK | total sent: 47[0m
+[0;32mI (2885) FFT_MASTER: Queuing pkt #192 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2885) FFT_MASTER: Transmitting pkt #192 over SPI...[0m
+[0;32mI (2895) FFT_MASTER: SPI sent #192 OK | total sent: 48[0m
+[0;32mI (2945) FFT_MASTER: Queuing pkt #196 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2945) FFT_MASTER: Transmitting pkt #196 over SPI...[0m
+[0;32mI (2945) FFT_MASTER: SPI sent #196 OK | total sent: 49[0m
+[0;32mI (2995) FFT_MASTER: Queuing pkt #200 | 0 Hz @ -200.0 dB[0m
+[0;32mI (2995) FFT_MASTER: Transmitting pkt #200 over SPI...[0m
+[0;32mI (2995) FFT_MASTER: SPI sent #200 OK | total sent: 50[0m
+[0;32mI (3045) FFT_MASTER: Queuing pkt #204 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3045) FFT_MASTER: Transmitting pkt #204 over SPI...[0m
+[0;32mI (3045) FFT_MASTER: SPI sent #204 OK | total sent: 51[0m
+[0;32mI (3095) FFT_MASTER: Queuing pkt #208 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3095) FFT_MASTER: Transmitting pkt #208 over SPI...[0m
+[0;32mI (3095) FFT_MASTER: SPI sent #208 OK | total sent: 52[0m
+[0;32mI (3145) FFT_MASTER: Queuing pkt #212 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3145) FFT_MASTER: Transmitting pkt #212 over SPI...[0m
+[0;32mI (3145) FFT_MASTER: SPI sent #212 OK | total sent: 53[0m
+[0;32mI (3195) FFT_MASTER: Queuing pkt #216 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3195) FFT_MASTER: Transmitting pkt #216 over SPI...[0m
+[0;32mI (3205) FFT_MASTER: SPI sent #216 OK | total sent: 54[0m
+[0;32mI (3245) FFT_MASTER: Queuing pkt #220 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3245) FFT_MASTER: Transmitting pkt #220 over SPI...[0m
+[0;32mI (3255) FFT_MASTER: SPI sent #220 OK | total sent: 55[0m
+[0;32mI (3295) FFT_MASTER: Queuing pkt #224 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3295) FFT_MASTER: Transmitting pkt #224 over SPI...[0m
+[0;32mI (3305) FFT_MASTER: SPI sent #224 OK | total sent: 56[0m
+[0;32mI (3345) FFT_MASTER: Queuing pkt #228 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3355) FFT_MASTER: Transmitting pkt #228 over SPI...[0m
+[0;32mI (3355) FFT_MASTER: SPI sent #228 OK | total sent: 57[0m
+[0;32mI (3405) FFT_MASTER: Queuing pkt #232 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3405) FFT_MASTER: Transmitting pkt #232 over SPI...[0m
+[0;32mI (3405) FFT_MASTER: SPI sent #232 OK | total sent: 58[0m
+[0;32mI (3455) FFT_MASTER: Queuing pkt #236 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3455) FFT_MASTER: Transmitting pkt #236 over SPI...[0m
+[0;32mI (3455) FFT_MASTER: SPI sent #236 OK | total sent: 59[0m
+[0;32mI (3505) FFT_MASTER: Queuing pkt #240 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3505) FFT_MASTER: Transmitting pkt #240 over SPI...[0m
+[0;32mI (3505) FFT_MASTER: SPI sent #240 OK | total sent: 60[0m
+[0;32mI (3555) FFT_MASTER: Queuing pkt #244 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3555) FFT_MASTER: Transmitting pkt #244 over SPI...[0m
+[0;32mI (3555) FFT_MASTER: SPI sent #244 OK | total sent: 61[0m
+[0;32mI (3605) FFT_MASTER: Queuing pkt #248 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3605) FFT_MASTER: Transmitting pkt #248 over SPI...[0m
+[0;32mI (3615) FFT_MASTER: SPI sent #248 OK | total sent: 62[0m
+[0;32mI (3655) FFT_MASTER: Queuing pkt #252 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3655) FFT_MASTER: Transmitting pkt #252 over SPI...[0m
+[0;32mI (3665) FFT_MASTER: SPI sent #252 OK | total sent: 63[0m
+[0;32mI (3705) FFT_MASTER: Queuing pkt #256 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3705) FFT_MASTER: Transmitting pkt #256 over SPI...[0m
+[0;32mI (3715) FFT_MASTER: SPI sent #256 OK | total sent: 64[0m
+[0;32mI (3755) FFT_MASTER: Queuing pkt #260 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3755) FFT_MASTER: Transmitting pkt #260 over SPI...[0m
+[0;32mI (3765) FFT_MASTER: SPI sent #260 OK | total sent: 65[0m
+[0;32mI (3815) FFT_MASTER: Queuing pkt #264 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3815) FFT_MASTER: Transmitting pkt #264 over SPI...[0m
+[0;32mI (3815) FFT_MASTER: SPI sent #264 OK | total sent: 66[0m
+[0;32mI (3865) FFT_MASTER: Queuing pkt #268 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3865) FFT_MASTER: Transmitting pkt #268 over SPI...[0m
+[0;32mI (3865) FFT_MASTER: SPI sent #268 OK | total sent: 67[0m
+[0;32mI (3915) FFT_MASTER: Queuing pkt #272 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3915) FFT_MASTER: Transmitting pkt #272 over SPI...[0m
+[0;32mI (3915) FFT_MASTER: SPI sent #272 OK | total sent: 68[0m
+[0;32mI (3965) FFT_MASTER: Queuing pkt #276 | 0 Hz @ -200.0 dB[0m
+[0;32mI (3965) FFT_MASTER: Transmitting pkt #276 over SPI...[0m
+[0;32mI (3965) FFT_MASTER: SPI sent #276 OK | total sent: 69[0m
+[0;32mI (4015) FFT_MASTER: Queuing pkt #280 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4015) FFT_MASTER: Transmitting pkt #280 over SPI...[0m
+[0;32mI (4025) FFT_MASTER: SPI sent #280 OK | total sent: 70[0m
+[0;32mI (4065) FFT_MASTER: Queuing pkt #284 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4065) FFT_MASTER: Transmitting pkt #284 over SPI...[0m
+[0;32mI (4075) FFT_MASTER: SPI sent #284 OK | total sent: 71[0m
+[0;32mI (4115) FFT_MASTER: Queuing pkt #288 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4115) FFT_MASTER: Transmitting pkt #288 over SPI...[0m
+[0;32mI (4125) FFT_MASTER: SPI sent #288 OK | total sent: 72[0m
+[0;32mI (4165) FFT_MASTER: Queuing pkt #292 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4165) FFT_MASTER: Transmitting pkt #292 over SPI...[0m
+[0;32mI (4175) FFT_MASTER: SPI sent #292 OK | total sent: 73[0m
+[0;32mI (4225) FFT_MASTER: Queuing pkt #296 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4225) FFT_MASTER: Transmitting pkt #296 over SPI...[0m
+[0;32mI (4225) FFT_MASTER: SPI sent #296 OK | total sent: 74[0m
+[0;32mI (4275) FFT_MASTER: Queuing pkt #300 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4275) FFT_MASTER: Transmitting pkt #300 over SPI...[0m
+[0;32mI (4275) FFT_MASTER: SPI sent #300 OK | total sent: 75[0m
+[0;32mI (4325) FFT_MASTER: Queuing pkt #304 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4325) FFT_MASTER: Transmitting pkt #304 over SPI...[0m
+[0;32mI (4325) FFT_MASTER: SPI sent #304 OK | total sent: 76[0m
+[0;32mI (4375) FFT_MASTER: Queuing pkt #308 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4375) FFT_MASTER: Transmitting pkt #308 over SPI...[0m
+[0;32mI (4375) FFT_MASTER: SPI sent #308 OK | total sent: 77[0m
+[0;32mI (4425) FFT_MASTER: Queuing pkt #312 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4425) FFT_MASTER: Transmitting pkt #312 over SPI...[0m
+[0;32mI (4425) FFT_MASTER: SPI sent #312 OK | total sent: 78[0m
+[0;32mI (4475) FFT_MASTER: Queuing pkt #316 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4475) FFT_MASTER: Transmitting pkt #316 over SPI...[0m
+[0;32mI (4485) FFT_MASTER: SPI sent #316 OK | total sent: 79[0m
+[0;32mI (4525) FFT_MASTER: Queuing pkt #320 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4525) FFT_MASTER: Transmitting pkt #320 over SPI...[0m
+[0;32mI (4535) FFT_MASTER: SPI sent #320 OK | total sent: 80[0m
+[0;32mI (4575) FFT_MASTER: Queuing pkt #324 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4575) FFT_MASTER: Transmitting pkt #324 over SPI...[0m
+[0;32mI (4585) FFT_MASTER: SPI sent #324 OK | total sent: 81[0m
+[0;32mI (4625) FFT_MASTER: Queuing pkt #328 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4635) FFT_MASTER: Transmitting pkt #328 over SPI...[0m
+[0;32mI (4635) FFT_MASTER: SPI sent #328 OK | total sent: 82[0m
+[0;32mI (4685) FFT_MASTER: Queuing pkt #332 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4685) FFT_MASTER: Transmitting pkt #332 over SPI...[0m
+[0;32mI (4685) FFT_MASTER: SPI sent #332 OK | total sent: 83[0m
+[0;32mI (4735) FFT_MASTER: Queuing pkt #336 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4735) FFT_MASTER: Transmitting pkt #336 over SPI...[0m
+[0;32mI (4735) FFT_MASTER: SPI sent #336 OK | total sent: 84[0m
+[0;32mI (4785) FFT_MASTER: Queuing pkt #340 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4785) FFT_MASTER: Transmitting pkt #340 over SPI...[0m
+[0;32mI (4785) FFT_MASTER: SPI sent #340 OK | total sent: 85[0m
+[0;32mI (4835) FFT_MASTER: Queuing pkt #344 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4835) FFT_MASTER: Transmitting pkt #344 over SPI...[0m
+[0;32mI (4835) FFT_MASTER: SPI sent #344 OK | total sent: 86[0m
+[0;32mI (4885) FFT_MASTER: Queuing pkt #348 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4885) FFT_MASTER: Transmitting pkt #348 over SPI...[0m
+[0;32mI (4895) FFT_MASTER: SPI sent #348 OK | total sent: 87[0m
+[0;32mI (4935) FFT_MASTER: Queuing pkt #352 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4935) FFT_MASTER: Transmitting pkt #352 over SPI...[0m
+[0;32mI (4945) FFT_MASTER: SPI sent #352 OK | total sent: 88[0m
+[0;32mI (4985) FFT_MASTER: Queuing pkt #356 | 0 Hz @ -200.0 dB[0m
+[0;32mI (4985) FFT_MASTER: Transmitting pkt #356 over SPI...[0m
+[0;32mI (4995) FFT_MASTER: SPI sent #356 OK | total sent: 89[0m
+[0;32mI (5035) FFT_MASTER: Queuing pkt #360 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5035) FFT_MASTER: Transmitting pkt #360 over SPI...[0m
+[0;32mI (5045) FFT_MASTER: SPI sent #360 OK | total sent: 90[0m
+[0;32mI (5095) FFT_MASTER: Queuing pkt #364 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5095) FFT_MASTER: Transmitting pkt #364 over SPI...[0m
+[0;32mI (5095) FFT_MASTER: SPI sent #364 OK | total sent: 91[0m
+[0;32mI (5145) FFT_MASTER: Queuing pkt #368 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5145) FFT_MASTER: Transmitting pkt #368 over SPI...[0m
+[0;32mI (5145) FFT_MASTER: SPI sent #368 OK | total sent: 92[0m
+[0;32mI (5195) FFT_MASTER: Queuing pkt #372 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5195) FFT_MASTER: Transmitting pkt #372 over SPI...[0m
+[0;32mI (5195) FFT_MASTER: SPI sent #372 OK | total sent: 93[0m
+[0;32mI (5245) FFT_MASTER: Queuing pkt #376 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5245) FFT_MASTER: Transmitting pkt #376 over SPI...[0m
+[0;32mI (5245) FFT_MASTER: SPI sent #376 OK | total sent: 94[0m
+[0;32mI (5295) FFT_MASTER: Queuing pkt #380 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5295) FFT_MASTER: Transmitting pkt #380 over SPI...[0m
+[0;32mI (5305) FFT_MASTER: SPI sent #380 OK | total sent: 95[0m
+[0;32mI (5345) FFT_MASTER: Queuing pkt #384 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5345) FFT_MASTER: Transmitting pkt #384 over SPI...[0m
+[0;32mI (5355) FFT_MASTER: SPI sent #384 OK | total sent: 96[0m
+[0;32mI (5395) FFT_MASTER: Queuing pkt #388 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5395) FFT_MASTER: Transmitting pkt #388 over SPI...[0m
+[0;32mI (5405) FFT_MASTER: SPI sent #388 OK | total sent: 97[0m
+[0;32mI (5445) FFT_MASTER: Queuing pkt #392 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5445) FFT_MASTER: Transmitting pkt #392 over SPI...[0m
+[0;32mI (5455) FFT_MASTER: SPI sent #392 OK | total sent: 98[0m
+[0;32mI (5505) FFT_MASTER: Queuing pkt #396 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5505) FFT_MASTER: Transmitting pkt #396 over SPI...[0m
+[0;32mI (5505) FFT_MASTER: SPI sent #396 OK | total sent: 99[0m
+[0;32mI (5555) FFT_MASTER: Queuing pkt #400 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5555) FFT_MASTER: Transmitting pkt #400 over SPI...[0m
+[0;32mI (5555) FFT_MASTER: SPI sent #400 OK | total sent: 100[0m
+[0;32mI (5605) FFT_MASTER: Queuing pkt #404 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5605) FFT_MASTER: Transmitting pkt #404 over SPI...[0m
+[0;32mI (5605) FFT_MASTER: SPI sent #404 OK | total sent: 101[0m
+[0;32mI (5655) FFT_MASTER: Queuing pkt #408 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5655) FFT_MASTER: Transmitting pkt #408 over SPI...[0m
+[0;32mI (5655) FFT_MASTER: SPI sent #408 OK | total sent: 102[0m
+[0;32mI (5705) FFT_MASTER: Queuing pkt #412 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5705) FFT_MASTER: Transmitting pkt #412 over SPI...[0m
+[0;32mI (5705) FFT_MASTER: SPI sent #412 OK | total sent: 103[0m
+[0;32mI (5755) FFT_MASTER: Queuing pkt #416 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5755) FFT_MASTER: Transmitting pkt #416 over SPI...[0m
+[0;32mI (5765) FFT_MASTER: SPI sent #416 OK | total sent: 104[0m
+[0;32mI (5805) FFT_MASTER: Queuing pkt #420 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5805) FFT_MASTER: Transmitting pkt #420 over SPI...[0m
+[0;32mI (5815) FFT_MASTER: SPI sent #420 OK | total sent: 105[0m
+[0;32mI (5855) FFT_MASTER: Queuing pkt #424 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5855) FFT_MASTER: Transmitting pkt #424 over SPI...[0m
+[0;32mI (5865) FFT_MASTER: SPI sent #424 OK | total sent: 106[0m
+[0;32mI (5905) FFT_MASTER: Queuing pkt #428 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5915) FFT_MASTER: Transmitting pkt #428 over SPI...[0m
+[0;32mI (5915) FFT_MASTER: SPI sent #428 OK | total sent: 107[0m
+[0;32mI (5965) FFT_MASTER: Queuing pkt #432 | 0 Hz @ -200.0 dB[0m
+[0;32mI (5965) FFT_MASTER: Transmitting pkt #432 over SPI...[0m
+[0;32mI (5965) FFT_MASTER: SPI sent #432 OK | total sent: 108[0m
+[0;32mI (6015) FFT_MASTER: Queuing pkt #436 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6015) FFT_MASTER: Transmitting pkt #436 over SPI...[0m
+[0;32mI (6015) FFT_MASTER: SPI sent #436 OK | total sent: 109[0m
+[0;32mI (6065) FFT_MASTER: Queuing pkt #440 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6065) FFT_MASTER: Transmitting pkt #440 over SPI...[0m
+[0;32mI (6065) FFT_MASTER: SPI sent #440 OK | total sent: 110[0m
+[0;32mI (6115) FFT_MASTER: Queuing pkt #444 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6115) FFT_MASTER: Transmitting pkt #444 over SPI...[0m
+[0;32mI (6115) FFT_MASTER: SPI sent #444 OK | total sent: 111[0m
+[0;32mI (6165) FFT_MASTER: Queuing pkt #448 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6165) FFT_MASTER: Transmitting pkt #448 over SPI...[0m
+[0;32mI (6175) FFT_MASTER: SPI sent #448 OK | total sent: 112[0m
+[0;32mI (6215) FFT_MASTER: Queuing pkt #452 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6215) FFT_MASTER: Transmitting pkt #452 over SPI...[0m
+[0;32mI (6225) FFT_MASTER: SPI sent #452 OK | total sent: 113[0m
+[0;32mI (6265) FFT_MASTER: Queuing pkt #456 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6265) FFT_MASTER: Transmitting pkt #456 over SPI...[0m
+[0;32mI (6275) FFT_MASTER: SPI sent #456 OK | total sent: 114[0m
+[0;32mI (6315) FFT_MASTER: Queuing pkt #460 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6315) FFT_MASTER: Transmitting pkt #460 over SPI...[0m
+[0;32mI (6325) FFT_MASTER: SPI sent #460 OK | total sent: 115[0m
+[0;32mI (6375) FFT_MASTER: Queuing pkt #464 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6375) FFT_MASTER: Transmitting pkt #464 over SPI...[0m
+[0;32mI (6375) FFT_MASTER: SPI sent #464 OK | total sent: 116[0m
+[0;32mI (6425) FFT_MASTER: Queuing pkt #468 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6425) FFT_MASTER: Transmitting pkt #468 over SPI...[0m
+[0;32mI (6425) FFT_MASTER: SPI sent #468 OK | total sent: 117[0m
+[0;32mI (6475) FFT_MASTER: Queuing pkt #472 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6475) FFT_MASTER: Transmitting pkt #472 over SPI...[0m
+[0;32mI (6475) FFT_MASTER: SPI sent #472 OK | total sent: 118[0m
+[0;32mI (6525) FFT_MASTER: Queuing pkt #476 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6525) FFT_MASTER: Transmitting pkt #476 over SPI...[0m
+[0;32mI (6525) FFT_MASTER: SPI sent #476 OK | total sent: 119[0m
+[0;32mI (6575) FFT_MASTER: Queuing pkt #480 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6575) FFT_MASTER: Transmitting pkt #480 over SPI...[0m
+[0;32mI (6585) FFT_MASTER: SPI sent #480 OK | total sent: 120[0m
+[0;32mI (6625) FFT_MASTER: Queuing pkt #484 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6625) FFT_MASTER: Transmitting pkt #484 over SPI...[0m
+[0;32mI (6635) FFT_MASTER: SPI sent #484 OK | total sent: 121[0m
+[0;32mI (6675) FFT_MASTER: Queuing pkt #488 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6675) FFT_MASTER: Transmitting pkt #488 over SPI...[0m
+[0;32mI (6685) FFT_MASTER: SPI sent #488 OK | total sent: 122[0m
+[0;32mI (6725) FFT_MASTER: Queuing pkt #492 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6725) FFT_MASTER: Transmitting pkt #492 over SPI...[0m
+[0;32mI (6735) FFT_MASTER: SPI sent #492 OK | total sent: 123[0m
+[0;32mI (6785) FFT_MASTER: Queuing pkt #496 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6785) FFT_MASTER: Transmitting pkt #496 over SPI...[0m
+[0;32mI (6785) FFT_MASTER: SPI sent #496 OK | total sent: 124[0m
+[0;32mI (6835) FFT_MASTER: Queuing pkt #500 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6835) FFT_MASTER: Transmitting pkt #500 over SPI...[0m
+[0;32mI (6835) FFT_MASTER: SPI sent #500 OK | total sent: 125[0m
+[0;32mI (6885) FFT_MASTER: Queuing pkt #504 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6885) FFT_MASTER: Transmitting pkt #504 over SPI...[0m
+[0;32mI (6885) FFT_MASTER: SPI sent #504 OK | total sent: 126[0m
+[0;32mI (6935) FFT_MASTER: Queuing pkt #508 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6935) FFT_MASTER: Transmitting pkt #508 over SPI...[0m
+[0;32mI (6935) FFT_MASTER: SPI sent #508 OK | total sent: 127[0m
+[0;32mI (6985) FFT_MASTER: Queuing pkt #512 | 0 Hz @ -200.0 dB[0m
+[0;32mI (6985) FFT_MASTER: Transmitting pkt #512 over SPI...[0m
+[0;32mI (6985) FFT_MASTER: SPI sent #512 OK | total sent: 128[0m
+[0;32mI (7035) FFT_MASTER: Queuing pkt #516 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7035) FFT_MASTER: Transmitting pkt #516 over SPI...[0m
+[0;32mI (7045) FFT_MASTER: SPI sent #516 OK | total sent: 129[0m
+[0;32mI (7085) FFT_MASTER: Queuing pkt #520 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7085) FFT_MASTER: Transmitting pkt #520 over SPI...[0m
+[0;32mI (7095) FFT_MASTER: SPI sent #520 OK | total sent: 130[0m
+[0;32mI (7135) FFT_MASTER: Queuing pkt #524 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7135) FFT_MASTER: Transmitting pkt #524 over SPI...[0m
+[0;32mI (7145) FFT_MASTER: SPI sent #524 OK | total sent: 131[0m
+[0;32mI (7185) FFT_MASTER: Queuing pkt #528 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7195) FFT_MASTER: Transmitting pkt #528 over SPI...[0m
+[0;32mI (7195) FFT_MASTER: SPI sent #528 OK | total sent: 132[0m
+[0;32mI (7245) FFT_MASTER: Queuing pkt #532 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7245) FFT_MASTER: Transmitting pkt #532 over SPI...[0m
+[0;32mI (7245) FFT_MASTER: SPI sent #532 OK | total sent: 133[0m
+[0;32mI (7295) FFT_MASTER: Queuing pkt #536 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7295) FFT_MASTER: Transmitting pkt #536 over SPI...[0m
+[0;32mI (7295) FFT_MASTER: SPI sent #536 OK | total sent: 134[0m
+[0;32mI (7345) FFT_MASTER: Queuing pkt #540 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7345) FFT_MASTER: Transmitting pkt #540 over SPI...[0m
+[0;32mI (7345) FFT_MASTER: SPI sent #540 OK | total sent: 135[0m
+[0;32mI (7395) FFT_MASTER: Queuing pkt #544 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7395) FFT_MASTER: Transmitting pkt #544 over SPI...[0m
+[0;32mI (7395) FFT_MASTER: SPI sent #544 OK | total sent: 136[0m
+[0;32mI (7445) FFT_MASTER: Queuing pkt #548 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7445) FFT_MASTER: Transmitting pkt #548 over SPI...[0m
+[0;32mI (7455) FFT_MASTER: SPI sent #548 OK | total sent: 137[0m
+[0;32mI (7495) FFT_MASTER: Queuing pkt #552 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7495) FFT_MASTER: Transmitting pkt #552 over SPI...[0m
+[0;32mI (7505) FFT_MASTER: SPI sent #552 OK | total sent: 138[0m
+[0;32mI (7545) FFT_MASTER: Queuing pkt #556 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7545) FFT_MASTER: Transmitting pkt #556 over SPI...[0m
+[0;32mI (7555) FFT_MASTER: SPI sent #556 OK | total sent: 139[0m
+[0;32mI (7595) FFT_MASTER: Queuing pkt #560 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7595) FFT_MASTER: Transmitting pkt #560 over SPI...[0m
+[0;32mI (7605) FFT_MASTER: SPI sent #560 OK | total sent: 140[0m
+[0;32mI (7655) FFT_MASTER: Queuing pkt #564 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7655) FFT_MASTER: Transmitting pkt #564 over SPI...[0m
+[0;32mI (7655) FFT_MASTER: SPI sent #564 OK | total sent: 141[0m
+[0;32mI (7705) FFT_MASTER: Queuing pkt #568 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7705) FFT_MASTER: Transmitting pkt #568 over SPI...[0m
+[0;32mI (7705) FFT_MASTER: SPI sent #568 OK | total sent: 142[0m
+[0;32mI (7755) FFT_MASTER: Queuing pkt #572 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7755) FFT_MASTER: Transmitting pkt #572 over SPI...[0m
+[0;32mI (7755) FFT_MASTER: SPI sent #572 OK | total sent: 143[0m
+[0;32mI (7805) FFT_MASTER: Queuing pkt #576 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7805) FFT_MASTER: Transmitting pkt #576 over SPI...[0m
+[0;32mI (7805) FFT_MASTER: SPI sent #576 OK | total sent: 144[0m
+[0;32mI (7855) FFT_MASTER: Queuing pkt #580 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7855) FFT_MASTER: Transmitting pkt #580 over SPI...[0m
+[0;32mI (7865) FFT_MASTER: SPI sent #580 OK | total sent: 145[0m
+[0;32mI (7905) FFT_MASTER: Queuing pkt #584 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7905) FFT_MASTER: Transmitting pkt #584 over SPI...[0m
+[0;32mI (7915) FFT_MASTER: SPI sent #584 OK | total sent: 146[0m
+[0;32mI (7955) FFT_MASTER: Queuing pkt #588 | 0 Hz @ -200.0 dB[0m
+[0;32mI (7955) FFT_MASTER: Transmitting pkt #588 over SPI...[0m
+[0;32mI (7965) FFT_MASTER: SPI sent #588 OK | total sent: 147[0m
+[0;32mI (8005) FFT_MASTER: Queuing pkt #592 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8005) FFT_MASTER: Transmitting pkt #592 over SPI...[0m
+[0;32mI (8015) FFT_MASTER: SPI sent #592 OK | total sent: 148[0m
+[0;32mI (8065) FFT_MASTER: Queuing pkt #596 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8065) FFT_MASTER: Transmitting pkt #596 over SPI...[0m
+[0;32mI (8065) FFT_MASTER: SPI sent #596 OK | total sent: 149[0m
+[0;32mI (8115) FFT_MASTER: Queuing pkt #600 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8115) FFT_MASTER: Transmitting pkt #600 over SPI...[0m
+[0;32mI (8115) FFT_MASTER: SPI sent #600 OK | total sent: 150[0m
+[0;32mI (8165) FFT_MASTER: Queuing pkt #604 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8165) FFT_MASTER: Transmitting pkt #604 over SPI...[0m
+[0;32mI (8165) FFT_MASTER: SPI sent #604 OK | total sent: 151[0m
+[0;32mI (8215) FFT_MASTER: Queuing pkt #608 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8215) FFT_MASTER: Transmitting pkt #608 over SPI...[0m
+[0;32mI (8215) FFT_MASTER: SPI sent #608 OK | total sent: 152[0m
+[0;32mI (8265) FFT_MASTER: Queuing pkt #612 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8265) FFT_MASTER: Transmitting pkt #612 over SPI...[0m
+[0;32mI (8265) FFT_MASTER: SPI sent #612 OK | total sent: 153[0m
+[0;32mI (8315) FFT_MASTER: Queuing pkt #616 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8315) FFT_MASTER: Transmitting pkt #616 over SPI...[0m
+[0;32mI (8325) FFT_MASTER: SPI sent #616 OK | total sent: 154[0m
+[0;32mI (8365) FFT_MASTER: Queuing pkt #620 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8365) FFT_MASTER: Transmitting pkt #620 over SPI...[0m
+[0;32mI (8375) FFT_MASTER: SPI sent #620 OK | total sent: 155[0m
+[0;32mI (8415) FFT_MASTER: Queuing pkt #624 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8415) FFT_MASTER: Transmitting pkt #624 over SPI...[0m
+[0;32mI (8425) FFT_MASTER: SPI sent #624 OK | total sent: 156[0m
+[0;32mI (8465) FFT_MASTER: Queuing pkt #628 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8475) FFT_MASTER: Transmitting pkt #628 over SPI...[0m
+[0;32mI (8475) FFT_MASTER: SPI sent #628 OK | total sent: 157[0m
+[0;32mI (8525) FFT_MASTER: Queuing pkt #632 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8525) FFT_MASTER: Transmitting pkt #632 over SPI...[0m
+[0;32mI (8525) FFT_MASTER: SPI sent #632 OK | total sent: 158[0m
+[0;32mI (8575) FFT_MASTER: Queuing pkt #636 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8575) FFT_MASTER: Transmitting pkt #636 over SPI...[0m
+[0;32mI (8575) FFT_MASTER: SPI sent #636 OK | total sent: 159[0m
+[0;32mI (8625) FFT_MASTER: Queuing pkt #640 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8625) FFT_MASTER: Transmitting pkt #640 over SPI...[0m
+[0;32mI (8625) FFT_MASTER: SPI sent #640 OK | total sent: 160[0m
+[0;32mI (8675) FFT_MASTER: Queuing pkt #644 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8675) FFT_MASTER: Transmitting pkt #644 over SPI...[0m
+[0;32mI (8675) FFT_MASTER: SPI sent #644 OK | total sent: 161[0m
+[0;32mI (8725) FFT_MASTER: Queuing pkt #648 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8725) FFT_MASTER: Transmitting pkt #648 over SPI...[0m
+[0;32mI (8735) FFT_MASTER: SPI sent #648 OK | total sent: 162[0m
+[0;32mI (8775) FFT_MASTER: Queuing pkt #652 | 0 Hz @ -200.0 dB[0m
+[0;32mI (8775) FFT_MASTER: Transmitting pkt #652 over SPI...[0m
+[0;32mI (8785) FFT_MASTER: SPI sent #652 OK | total sent: 163[0m
+[0;32mI (8825) FFT_MASTER: Queuing pkt #656 | 0 Hz @ -200.0 dB[0m

@@ -1,0 +1,87 @@
+Command: /home/varad/.espressif/python_env/idf6.1_py3.12_env/bin/python /home/varad/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/varad/testing/build/testing.elf /home/varad/testing/build/bootloader/bootloader.elf -m '/home/varad/.espressif/python_env/idf6.1_py3.12_env/bin/python' '/home/varad/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v6.1-dev-2002-gfa47e101d5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Mar 17 2026 17:04:15[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (15) boot: chip revision: v3.1[0m
+[0;32mI (18) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (22) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (25) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (29) boot: Enabling RNG early entropy source...[0m
+[0;32mI (33) boot: Partition Table:[0m
+[0;32mI (36) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (42) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (49) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (55) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (62) boot: End of partition table[0m
+[0;32mI (65) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e3c0h (123840) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=0002e3e8 vaddr=3ffb0000 size=01c30h (  7216) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=8f3dch (586716) map[0m
+[0;32mI (330) esp_image: segment 3: paddr=000bf404 vaddr=3ffb1c30 size=02968h ( 10600) load[0m
+[0;32mI (334) esp_image: segment 4: paddr=000c1d74 vaddr=40080000 size=15d6ch ( 89452) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000d7ae8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (382) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (382) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (401) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (401) cpu_start: Pro cpu start user code[0m
+[0;32mI (401) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (403) app_init: Application information:[0m
+[0;32mI (407) app_init: Project name:     testing[0m
+[0;32mI (411) app_init: App version:      1[0m
+[0;32mI (414) app_init: Compile time:     Mar 17 2026 17:05:09[0m
+[0;32mI (419) app_init: ELF file SHA256:  d87f2b041...[0m
+[0;32mI (424) app_init: ESP-IDF:          v6.1-dev-2002-gfa47e101d5[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFBA2F0 len 00025D10 (151 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 40095D6C len 0000A294 (40 KiB): IRAM[0m
+[0;33mW (475) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (487) spi_flash: detected chip: generic[0m
+[0;32mI (490) spi_flash: flash io: dio[0m
+[0;33mW (493) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (507) main_task: Started on CPU0[0m
+[0;32mI (517) main_task: Calling app_main()[0m
+[0;32mI (517) WEB_SLAVE: === Spectrum Web Slave ===[0m
+[0;32mI (517) WEB_SLAVE: Packet size: 1060 bytes[0m
+[0;32mI (537) WEB_SLAVE: SPI slave task started on core 0[0m
+[0;32mI (537) WEB_SLAVE: Pins — MOSI:23 MISO:19 CLK:18 CS:15[0m
+[0;32mI (537) WEB_SLAVE: Calling spi_slave_initialize (SPI3_HOST)...[0m
+[0;32mI (547) WEB_SLAVE: spi_slave_initialize returned: ESP_OK (0x0)[0m
+[0;32mI (547) WEB_SLAVE: SPI slave ready — waiting for packets (1060 bytes each)[0m
+[0;32mI (767) wifi:wifi driver task: 3ffc3ee0, prio:23, stack:6656, core=0[0m
+[0;32mI (777) wifi:wifi firmware version: 1a4c082[0m
+[0;32mI (777) wifi:wifi certification version: v7.0[0m
+[0;32mI (777) wifi:config NVS flash: enabled[0m
+[0;32mI (777) wifi:config nano formatting: disabled[0m
+[0;32mI (777) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (787) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (787) wifi:Init management short buffer num: 32[0m
+[0;32mI (797) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (797) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (797) wifi:Init static rx buffer num: 10[0m
+[0;32mI (807) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (807) wifi_init: rx ba win: 6[0m
+[0;32mI (807) wifi_init: accept mbox: 6[0m
+[0;32mI (817) wifi_init: tcpip mbox: 32[0m
+[0;32mI (817) wifi_init: udp mbox: 6[0m
+[0;32mI (817) wifi_init: tcp mbox: 6[0m
+[0;32mI (827) wifi_init: tcp tx win: 5760[0m
+[0;32mI (827) wifi_init: tcp rx win: 5760[0m
+[0;32mI (827) wifi_init: tcp mss: 1440[0m
+[0;32mI (837) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (837) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (847) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (927) wifi:mode : softAP (30:76:f5:f3:9b:f5)[0m
+[0;32mI (937) wifi:Total power save buffer number: 16[0m
+[0;32mI (937) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (937) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (937) WEB_SLAVE: WiFi AP: "ESP32-Spectrum" | IP: 192.168.4.1[0m
+[0;32mI (937) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (957) WEB_SLAVE: HTTP server ready — http://192.168.4.1[0m
+[0;32mI (957) WEB_SLAVE: Ready — connect to "ESP32-Spectrum" then open http://192.168.4.1[0m
+[0;32mI (957) main_task: Returned from app_main()[0m
