@@ -35,7 +35,7 @@
 
 #define FFT_SIZE                512
 #define FFT_BINS                (FFT_SIZE / 2)
-#define SAMPLE_RATE_HZ          40000
+#define SAMPLE_RATE_HZ          80000
 #define FREQ_BIN_WIDTH_HZ       (SAMPLE_RATE_HZ / FFT_SIZE)
 
 #define ADC_READ_LEN            256
