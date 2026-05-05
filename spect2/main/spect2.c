@@ -41,12 +41,11 @@
 #define ADC_READ_LEN            256
 #define SAMPLES_PER_BUFFER      FFT_SIZE
 
-// SPI — CS changed to GPIO15 (GPIO5 is a strapping pin, avoid it)
 #define PIN_NUM_MOSI            23
 #define PIN_NUM_MISO            19
 #define PIN_NUM_CLK             18
 #define PIN_NUM_CS              15
-#define SPI_CLOCK_HZ            2000000    // 2 MHz — safer for breadboard wires
+#define SPI_CLOCK_HZ            2000000   
 
 #define SEND_EVERY_N_FFT        4
 #define SPI_PACKET_MAGIC        0xE5FF1234U
